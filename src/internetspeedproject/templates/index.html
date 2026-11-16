@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet Monitor</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+
+  <body>
+    <div class="widget">
+      <span class="live"> ↓ <span id="download">0.00</span> mbps </span>
+
+      <div class="action-slot">
+        <button id="speedTestBtn" class="action-state" onclick="runTest()">
+          Speed Test
+        </button>
+
+        <span id="testing" class="testing action-state is-hidden">
+          Testing
+        </span>
+
+        <span id="speedResult" class="speed-result action-state is-hidden">
+          ↑ <span id="maxUpload">0</span>
+
+          ↓ <span id="maxDownload">0</span>
+        </span>
+      </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
